@@ -4,7 +4,7 @@ const pages = (await getCollection("pages"))
   .filter((p) => p.data.navLabel)
   .sort((a, b) => a.data.order - b.data.order);
 
-const top = pages.filter((p) => !p.data.navGroup);
+const top = pages.filter((p) => !p.data.navGroup && p.id !== "home");
 const groups = new Map<string, typeof pages>();
 for (const p of pages.filter((p) => p.data.navGroup)) {
   const g = p.data.navGroup!;
@@ -14,21 +14,24 @@ for (const p of pages.filter((p) => p.data.navGroup)) {
 const href = (id: string) => (id === "news" ? "/news/" : `/${id}/`);
 const { current = "" } = Astro.props;
 ---
-<nav aria-label="Main">
-  <ul>
-    <li><a href="/" class={current === "home" ? "active" : ""}>Home</a></li>
-    {top.filter((p) => p.id !== "home").map((p) => (
-      <li><a href={href(p.id)} class={current === p.id ? "active" : ""}>{p.data.navLabel}</a></li>
-    ))}
-    {[...groups].map(([name, items]) => (
-      <li class="group">
-        <span>{name}</span>
-        <ul>
-          {items.map((p) => (
-            <li><a href={href(p.id)} class={current === p.id ? "active" : ""}>{p.data.navLabel}</a></li>
-          ))}
-        </ul>
-      </li>
-    ))}
-  </ul>
-</nav>
+<details class="menu">
+  <summary aria-label="Menu"><span class="burger"></span>Menu</summary>
+  <nav aria-label="Main">
+    <ul>
+      <li><a href="/" class={current === "home" ? "active" : ""}>Home</a></li>
+      {top.map((p) => (
+        <li><a href={href(p.id)} class={current === p.id ? "active" : ""}>{p.data.navLabel}</a></li>
+      ))}
+      {[...groups].map(([name, items]) => (
+        <li class="group">
+          <span>{name}</span>
+          <ul>
+            {items.map((p) => (
+              <li><a href={href(p.id)} class={current === p.id ? "active" : ""}>{p.data.navLabel}</a></li>
+            ))}
+          </ul>
+        </li>
+      ))}
+    </ul>
+  </nav>
+</details>

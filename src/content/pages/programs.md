@@ -1,4 +1,6 @@
 ---
+hero: "../../assets/race-action.jpg"
+heroAlt: "Three young speed skaters racing on the short track"
 title: "Programs"
 legacyId: 102
 order: 10

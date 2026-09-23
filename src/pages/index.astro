@@ -1,46 +1,138 @@
 ---
 import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
 import Base from "../layouts/Base.astro";
-import { render } from "astro:content";
+import hero from "../assets/race-action.jpg";
+import cheering from "../assets/cheering.jpg";
+import coach from "../assets/coach-award.jpg";
 
 const posts = (await getCollection("posts")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
 );
 const recent = posts.slice(0, 3);
 const REGISTER = "https://icereg.ca/#!/events/banffcanmore-speed-skating-club-20262027";
+const fmt = (d: Date) =>
+  d.toLocaleDateString("en-CA", { year: "numeric", month: "long", day: "numeric" });
 ---
 <Base
+  wide
   current="home"
-  description="Speed skating for all ages in Banff and Canmore. Wednesdays and Sundays at the Canmore Rec Centre. Beginners welcome."
+  description="Speed skating for all ages in Banff and Canmore. Wednesdays and Sundays at the Canmore Rec Centre. Beginners and adults welcome — skates and coaching provided at free Try-It nights."
 >
-  <h1>Speed skating in the Bow Valley</h1>
+  <section class="hero">
+    <Image src={hero} alt="Young speed skaters racing at the Canmore Rec Centre"
+           widths={[760, 1200, 1800]} sizes="100vw" loading="eager" />
+    <div class="hero-txt">
+      <p class="kicker">Canmore &amp; Banff &middot; Ages 6 to 70+</p>
+      <h1>Canada's fastest sport, right here in the Bow Valley</h1>
+      <p class="lede">
+        Two nights a week at the Canmore Rec Centre. Beginners through racers,
+        kids through masters &mdash; and you can join any time in the season.
+      </p>
+      <p class="btns">
+        <a class="cta-lg" href={REGISTER}>Register now</a>
+        <a class="cta-ghost" href="/try-it/">Try it free</a>
+      </p>
+    </div>
+  </section>
 
-  <p>
-    Banff Canmore Speed Skating welcomes skaters of all ages and abilities &mdash; from
-    first time on speed skates through to racing, plus adult masters sessions.
-    We train Wednesdays and Sundays at the Canmore Rec Centre, and you can join
-    any time through the season.
-  </p>
+  <section class="facts">
+    <div><strong>Wed</strong><span>5:15 &ndash; 7:45 pm</span></div>
+    <div><strong>Sun</strong><span>5:30 &ndash; 8:15 pm</span></div>
+    <div><strong>1 or 2</strong><span>nights a week</span></div>
+    <div><strong>Free</strong><span>try-it sessions</span></div>
+  </section>
 
-  <p><a class="cta" href={REGISTER}>Register for the 2026/2027 season</a></p>
+  <section class="split">
+    <div>
+      <h2>Never skated fast before?</h2>
+      <p>
+        That's who our Try-It nights are for. Skates, helmet, pads and coaching are
+        all provided &mdash; you just turn up. If you can glide and stop on hockey or
+        figure skates, you're ready.
+      </p>
+      <p>Ages 6 and up. Adults and parents are genuinely welcome on the ice too.</p>
+      <p><a class="cta" href="/try-it/">Try-It night details</a></p>
+    </div>
+    <Image src={cheering} alt="Young skaters cheering from the side of the rink"
+           widths={[560, 900]} sizes="(max-width: 860px) 100vw, 50vw" />
+  </section>
 
-  <div class="card">
-    <h3>New to the sport? Try it free.</h3>
-    <p>
-      We run free Try-It sessions with coaching and skate rental included &mdash;
-      just come along. Ages 6 and up, adults welcome.
-    </p>
-    <p><a href="/try-it/">Try-It night details &rarr;</a></p>
-  </div>
+  <section class="split reverse">
+    <Image src={coach} alt="A coach presenting a skater-of-the-month award"
+           widths={[560, 900]} sizes="(max-width: 860px) 100vw, 50vw" />
+    <div>
+      <h2>A small club that punches above its weight</h2>
+      <p>
+        We're a volunteer-run club with coaches who race themselves. Skaters go on
+        to provincial meets and the Calgary Oval &mdash; but plenty come just for the
+        fun of going fast on a Wednesday night.
+      </p>
+      <p>
+        Club race nights and the Canmore Ice Racing Challenge each December give
+        everyone something to aim at, at whatever level they're at.
+      </p>
+      <p><a class="cta" href="/programs/">See the programs</a></p>
+    </div>
+  </section>
 
-  <h2>Recent news</h2>
+  <h2>Latest news</h2>
   {recent.map((p) => (
     <div class="card">
+      <p class="meta">{fmt(p.data.date)}</p>
       <h3><a href={`/news/${p.id}/`}>{p.data.title}</a></h3>
-      <p class="meta">
-        {p.data.date.toLocaleDateString("en-CA", { year: "numeric", month: "long", day: "numeric" })}
-      </p>
     </div>
   ))}
   <p><a href="/news/">All news &rarr;</a></p>
+
+  <style>
+    .card h3 a { color: inherit; text-decoration: none; }
+    .card h3 a:hover { color: var(--blue); text-decoration: underline; }
+
+    .hero { display: grid; border-radius: 10px; overflow: hidden; margin-bottom: 26px; }
+    .hero > * { grid-area: 1 / 1; }
+    .hero :global(img) {
+      display: block; width: 100%; height: 100%;
+      min-height: clamp(360px, 52vw, 580px);
+      object-fit: cover; object-position: center 32%;
+    }
+    .hero-txt {
+      display: flex; flex-direction: column; justify-content: flex-end;
+      padding: clamp(26px, 4vw, 48px);
+      background: linear-gradient(to top, rgba(0,20,60,.95) 14%, rgba(0,22,70,.74) 50%, rgba(0,25,80,.2) 90%);
+      color: #fff; z-index: 1;
+    }
+    .kicker {
+      font-family: var(--display); font-weight: 700; text-transform: uppercase;
+      letter-spacing: .12em; font-size: 15px; color: var(--yellow); margin: 0 0 6px;
+    }
+    .hero-txt h1 {
+      color: #fff; margin: 0 0 12px; font-size: clamp(31px, 5.4vw, 58px);
+      max-width: 17ch; text-shadow: 0 2px 18px rgba(0,0,0,.4);
+    }
+    .lede { max-width: 54ch; font-size: clamp(16px, 1.9vw, 20px); margin: 0 0 22px; color: #e9f1ff; }
+    .btns { display: flex; flex-wrap: wrap; gap: 12px; margin: 0; }
+
+    .facts {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 2px; background: var(--line); border-radius: 8px; overflow: hidden; margin-bottom: 8px;
+    }
+    .facts div { background: var(--surface); padding: 18px 16px; text-align: center; }
+    .facts strong {
+      display: block; font-family: var(--display); font-weight: 800; text-transform: uppercase;
+      font-size: 27px; line-height: 1.1; color: var(--blue);
+    }
+    .facts span { font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: .05em; font-weight: 600; }
+
+    .split {
+      display: grid; gap: clamp(20px, 4vw, 44px); align-items: center;
+      grid-template-columns: 1fr 1fr; margin: 52px 0;
+    }
+    .split :global(img) { display: block; width: 100%; border-radius: 10px; aspect-ratio: 4/3; object-fit: cover; }
+    .split h2 { margin-top: 0; }
+    @media (max-width: 860px) {
+      .split, .split.reverse { grid-template-columns: 1fr; }
+      .split.reverse :global(img) { order: -1; }
+    }
+  </style>
 </Base>

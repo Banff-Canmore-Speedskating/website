@@ -3,12 +3,15 @@ import { glob } from "astro/loaders";
 
 const pages = defineCollection({
   loader: glob({ pattern: "**/*.md", base: "./src/content/pages" }),
-  schema: z.object({
+  schema: ({ image }) =>
+    z.object({
     title: z.string(),
     legacyId: z.number().optional(),
     order: z.number().default(99),
     navLabel: z.string().optional(),
     navGroup: z.string().optional(),
+    hero: image().optional(),
+    heroAlt: z.string().optional(),
   }),
 });
 

@@ -12,7 +12,7 @@ In addition to attending our regular training sessions, all skaters are encourag
 
 These competitions are held at the Thelma Crowe Arena in Canmore on the designated Sunday nights during the first practice that starts at 5:30pm. Family and friends are encouraged to come out and cheer everyone on. 
 
-## CLUB RACE DATES 2025/2026
+## Club race dates 2026/2027
 
 - TBD for the upcoming season
 

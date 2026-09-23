@@ -9,9 +9,11 @@ navLabel: "Try-it"
 
 If you are interested in trying out Speed Skating, please email communication@banffcanmorespeedskating.ca
 
-We have try-it nights scheduled from 5:15 to 6:15 on: 
+We have free try-it nights scheduled from 5:15 to 6:15 pm at the **Canmore Rec Centre (Thelma Crowe Arena)** on:
 
-- TDB for the upcoming season
+- **Sunday, September 27, 2026**
+
+- **Sunday, October 4, 2026**
 
 Participants must be at least 6 years old and able to skate unassisted and have basic skating skills, including gliding and stopping on any type of skates (i.e. hockey, figure skates, etc.) Families and adults are welcome to come out too!
 

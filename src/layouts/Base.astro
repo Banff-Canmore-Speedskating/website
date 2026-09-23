@@ -149,6 +149,13 @@ const siteName = "Banff Canmore Speed Skating";
       .pagefig { border-radius: 8px; overflow: hidden; margin: 0 0 30px; }
       .pagefig img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; object-position: center 40%; }
       @media (max-width: 560px) { .pagefig img { aspect-ratio: 3 / 2; } }
+      /* Portrait posters: shown whole, never cropped. */
+      .posterfig { margin: 0 0 30px; text-align: center; }
+      .posterfig img {
+        display: inline-block; width: 100%; max-width: 440px; height: auto;
+        border-radius: 8px; border: 1px solid var(--line);
+        box-shadow: 0 6px 24px rgba(0,0,0,.14);
+      }
 
       footer { background: var(--navy); color: #c8d8ef; margin-top: 60px; }
       .finner { max-width: 1120px; margin: 0 auto; padding: 36px 20px;

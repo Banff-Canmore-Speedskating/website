@@ -1,7 +1,7 @@
 ---
-hero: "../../assets/cheering.jpg"
-heroAlt: "Young skaters cheering from the side of the rink at a club race"
-heroPos: "center 45%"
+hero: "../../assets/poster-try-it.jpg"
+heroAlt: "Try Speed Skating poster - free sessions Sunday September 27 and Sunday October 4, 5:15 to 6:15 pm at the Canmore Rec Center, Thelma Crowe Arena. Ages 6 and up, adults included. Register by email: communication@banffcanmorespeedskating.ca"
+heroStyle: "poster"
 title: "Try-it"
 legacyId: 1453
 order: 20

@@ -13,6 +13,7 @@ const pages = defineCollection({
     hero: image().optional(),
     heroAlt: z.string().optional(),
     heroPos: z.string().optional(), // object-position, e.g. "center 30%"
+    heroStyle: z.enum(["banner", "poster"]).default("banner"),
   }),
 });
 

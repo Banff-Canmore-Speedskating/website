@@ -1,7 +1,7 @@
 ---
-hero: "../../assets/solo-corner.jpg"
-heroAlt: "A skater leaning through a corner at the Canmore Rec Centre"
-heroPos: "center 45%"
+hero: "../../assets/poster-schedule.jpg"
+heroAlt: "Practice schedule - Wednesdays: beginner/intermediate 5:15 to 6:20 pm, advanced/masters 6:20 to 7:45 pm. Sundays: beginner/intermediate 5:30 to 6:45 pm, advanced/masters 6:45 to 8:15 pm. Canmore Rec Centre. One or two days a week, join anytime."
+heroStyle: "poster"
 title: "Calendar"
 legacyId: 296
 order: 40

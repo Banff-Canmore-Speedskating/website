@@ -1,5 +1,7 @@
 ---
 import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import hero from "../../assets/cheering.jpg";
 import Base from "../../layouts/Base.astro";
 
 const posts = (await getCollection("posts")).sort(
@@ -7,6 +9,11 @@ const posts = (await getCollection("posts")).sort(
 );
 ---
 <Base title="News" current="news">
+  <figure class="pagefig">
+    <Image src={hero} alt="Young skaters cheering from the side of the rink at a club race"
+           widths={[760, 1200]} sizes="(max-width: 820px) 100vw, 780px"
+           style="object-position:center 45%" />
+  </figure>
   {posts.map((p) => (
     <div class="card">
       <h3><a href={`/news/${p.id}/`}>{p.data.title}</a></h3>

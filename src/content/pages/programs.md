@@ -1,6 +1,7 @@
 ---
-hero: "../../assets/race-action.jpg"
-heroAlt: "Three young speed skaters racing on the short track"
+hero: "../../assets/coach-group.jpg"
+heroAlt: "A coach talking to a group of skaters gathered on the ice"
+heroPos: "center 42%"
 title: "Programs"
 legacyId: 102
 order: 10

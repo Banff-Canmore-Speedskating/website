@@ -2,9 +2,9 @@
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import Base from "../layouts/Base.astro";
-import hero from "../assets/race-action.jpg";
-import cheering from "../assets/cheering.jpg";
-import coach from "../assets/coach-award.jpg";
+import hero from "../assets/race-start.jpg";
+import welcoming from "../assets/race-action.jpg";
+import racing from "../assets/pack-corner.jpg";
 
 const posts = (await getCollection("posts")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
@@ -20,14 +20,15 @@ const fmt = (d: Date) =>
   description="Speed skating for all ages in Banff and Canmore. Wednesdays and Sundays at the Canmore Rec Centre. Beginners and adults welcome — skates and coaching provided at free Try-It nights."
 >
   <section class="hero">
-    <Image src={hero} alt="Young speed skaters racing at the Canmore Rec Centre"
+    <Image src={hero} alt="Three club skaters driving out of the start at a club race"
            widths={[760, 1200, 1800]} sizes="100vw" loading="eager" />
     <div class="hero-txt">
-      <p class="kicker">Canmore &amp; Banff &middot; Ages 6 to 70+</p>
-      <h1>Canada's fastest sport, right here in the Bow Valley</h1>
+      <p class="kicker">Canmore &amp; Banff &middot; Ages 6 and up</p>
+      <h1>Canada's most decorated Olympic sport</h1>
       <p class="lede">
-        Two nights a week at the Canmore Rec Centre. Beginners through racers,
-        kids through masters &mdash; and you can join any time in the season.
+        Two nights a week at the Canmore Rec Centre, right here in the Bow Valley.
+        Beginner through advanced, kids and masters &mdash; and you can join any
+        time through the season.
       </p>
       <p class="btns">
         <a class="cta-lg" href={REGISTER}>Register now</a>
@@ -54,23 +55,23 @@ const fmt = (d: Date) =>
       <p>Ages 6 and up. Adults and parents are genuinely welcome on the ice too.</p>
       <p><a class="cta" href="/try-it/">Try-It night details</a></p>
     </div>
-    <Image src={cheering} alt="Young skaters cheering from the side of the rink"
+    <Image src={welcoming} alt="Young skaters of mixed ages and abilities racing together"
            widths={[560, 900]} sizes="(max-width: 860px) 100vw, 50vw" />
   </section>
 
   <section class="split reverse">
-    <Image src={coach} alt="A coach presenting a skater-of-the-month award"
+    <Image src={racing} alt="Club skaters leaning through a corner during a race"
            widths={[560, 900]} sizes="(max-width: 860px) 100vw, 50vw" />
     <div>
-      <h2>A small club that punches above its weight</h2>
+      <h2>From club race nights to the Olympic Oval</h2>
       <p>
-        We're a volunteer-run club with coaches who race themselves. Skaters go on
-        to provincial meets and the Calgary Oval &mdash; but plenty come just for the
-        fun of going fast on a Wednesday night.
+        All skaters are encouraged to take part in our club race nights, the
+        Canmore Ice Racing Challenge each December, and local and provincial
+        meets scheduled through the season.
       </p>
       <p>
-        Club race nights and the Canmore Ice Racing Challenge each December give
-        everyone something to aim at, at whatever level they're at.
+        Long track programs are delivered in partnership with CSSA at the
+        Olympic Oval in Calgary.
       </p>
       <p><a class="cta" href="/programs/">See the programs</a></p>
     </div>

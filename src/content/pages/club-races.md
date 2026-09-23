@@ -1,6 +1,7 @@
 ---
 hero: "../../assets/coach-award.jpg"
 heroAlt: "A coach presenting a skater-of-the-month award on the ice"
+heroPos: "center 38%"
 title: "Club Races"
 legacyId: 155
 order: 30

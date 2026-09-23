@@ -1,4 +1,7 @@
 ---
+hero: "../../assets/club-group.jpg"
+heroAlt: "The Banff Canmore Speed Skating club gathered on the ice"
+heroPos: "center 40%"
 title: "Contact Us"
 legacyId: 55
 order: 60

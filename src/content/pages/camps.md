@@ -1,4 +1,7 @@
 ---
+hero: "../../assets/beginners.jpg"
+heroAlt: "Young skaters spread out across the ice during a session"
+heroPos: "center 50%"
 title: "Camps"
 legacyId: 161
 order: 31

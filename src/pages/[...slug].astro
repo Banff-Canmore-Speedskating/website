@@ -12,12 +12,14 @@ export async function getStaticPaths() {
 
 const { page } = Astro.props;
 const { Content } = await render(page);
-const { hero, heroAlt, title } = page.data;
+const { hero, heroAlt, heroPos, title } = page.data;
 ---
 <Base title={title} current={page.id}>
   {hero && (
     <figure class="pagefig">
-      <Image src={hero} alt={heroAlt ?? ""} widths={[760, 1200]} sizes="(max-width: 820px) 100vw, 780px" />
+      <Image src={hero} alt={heroAlt ?? ""} widths={[760, 1200, 1600]}
+             sizes="(max-width: 820px) 100vw, 780px"
+             style={heroPos ? `object-position:${heroPos}` : undefined} />
     </figure>
   )}
   <Content />

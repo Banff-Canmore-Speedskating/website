@@ -12,6 +12,7 @@ const pages = defineCollection({
     navGroup: z.string().optional(),
     hero: image().optional(),
     heroAlt: z.string().optional(),
+    heroPos: z.string().optional(), // object-position, e.g. "center 30%"
   }),
 });
 

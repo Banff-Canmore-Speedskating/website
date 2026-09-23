@@ -1,4 +1,7 @@
 ---
+hero: "../../assets/solo-corner.jpg"
+heroAlt: "A skater leaning through a corner at the Canmore Rec Centre"
+heroPos: "center 45%"
 title: "Calendar"
 legacyId: 296
 order: 40

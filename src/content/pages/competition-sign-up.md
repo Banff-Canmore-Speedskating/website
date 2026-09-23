@@ -1,4 +1,7 @@
 ---
+hero: "../../assets/cornering.jpg"
+heroAlt: "A skater cornering low with a hand on the ice"
+heroPos: "center 55%"
 title: "Competition Sign Up"
 legacyId: 150
 order: 32

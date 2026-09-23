@@ -1,6 +1,7 @@
 ---
 hero: "../../assets/cheering.jpg"
 heroAlt: "Young skaters cheering from the side of the rink at a club race"
+heroPos: "center 45%"
 title: "Try-it"
 legacyId: 1453
 order: 20

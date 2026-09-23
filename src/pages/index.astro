@@ -1,0 +1,46 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../layouts/Base.astro";
+import { render } from "astro:content";
+
+const posts = (await getCollection("posts")).sort(
+  (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
+);
+const recent = posts.slice(0, 3);
+const REGISTER = "https://icereg.ca/#!/events/banffcanmore-speed-skating-club-20262027";
+---
+<Base
+  current="home"
+  description="Speed skating for all ages in Banff and Canmore. Wednesdays and Sundays at the Canmore Rec Centre. Beginners welcome."
+>
+  <h1>Speed skating in the Bow Valley</h1>
+
+  <p>
+    Banff Canmore Speed Skating welcomes skaters of all ages and abilities &mdash; from
+    first time on speed skates through to racing, plus adult masters sessions.
+    We train Wednesdays and Sundays at the Canmore Rec Centre, and you can join
+    any time through the season.
+  </p>
+
+  <p><a class="cta" href={REGISTER}>Register for the 2026/2027 season</a></p>
+
+  <div class="card">
+    <h3>New to the sport? Try it free.</h3>
+    <p>
+      We run free Try-It sessions with coaching and skate rental included &mdash;
+      just come along. Ages 6 and up, adults welcome.
+    </p>
+    <p><a href="/try-it/">Try-It night details &rarr;</a></p>
+  </div>
+
+  <h2>Recent news</h2>
+  {recent.map((p) => (
+    <div class="card">
+      <h3><a href={`/news/${p.id}/`}>{p.data.title}</a></h3>
+      <p class="meta">
+        {p.data.date.toLocaleDateString("en-CA", { year: "numeric", month: "long", day: "numeric" })}
+      </p>
+    </div>
+  ))}
+  <p><a href="/news/">All news &rarr;</a></p>
+</Base>

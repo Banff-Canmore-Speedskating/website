@@ -41,6 +41,6 @@ Banff/Canmore Speed Skating Club is a member of True Sport and committed to the
 <div class="embed">
   <iframe
     title="Banff Canmore Speed Skating club calendar"
-    src="https://calendar.google.com/calendar/embed?src=c_9770a52ff5ea365b59135b05fdf2752bcc2231392f5e7d75f81a707175a6b40f%40group.calendar.google.com&ctz=America%2FEdmonton"
+    src="https://calendar.google.com/calendar/embed?src=c_e0cfbac5c15c4772ec57c0e596c24624a88bb34db22dc544abe7e50d9b31ad30%40group.calendar.google.com&ctz=America%2FEdmonton"
     loading="lazy"></iframe>
 </div>

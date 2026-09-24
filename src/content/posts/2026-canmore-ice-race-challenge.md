@@ -22,5 +22,3 @@ Entry Deadline: Tuesday December 1, 2026, at Midnight
 We will be capping the number of skaters at 115.
 
 We are a very small club and we can't run this race without volunteers. Please consider helping.
-
-Volunteer form – https://volunteersignup.org/JQHJW

@@ -1,0 +1,266 @@
+# Pages CMS config - https://pagescms.org
+#
+# Scoped deliberately:
+#   * News posts   - can be created and edited. Rename is blocked because the
+#                    filename is the URL slug.
+#   * Pages        - edit only. No create, no delete, no rename, so the site
+#                    structure and navigation cannot be changed from the CMS.
+#
+# Structural frontmatter (legacyId, order, navLabel, navGroup, hero*) is
+# declared but `hidden`. It is declared so the CMS writes it back untouched -
+# the docs do not state whether undeclared frontmatter survives a save, and
+# losing `legacyId` would silently break the /?page_id= redirects that keep
+# every old inbound link working.
+#
+# The home page is intentionally absent: it is a custom template, not markdown.
+media:
+  input: public/media
+  output: /media
+content:
+- name: news
+  label: News posts
+  type: collection
+  path: src/content/posts
+  view:
+    fields:
+    - title
+    - date
+    sort:
+    - date
+    default:
+      order: desc
+  operations:
+    rename: false
+  fields:
+  - name: title
+    label: Headline
+    type: string
+    required: true
+  - name: date
+    label: Date
+    type: date
+    required: true
+  - name: legacyId
+    label: Legacy WordPress ID
+    type: number
+    hidden: true
+  - name: body
+    label: Post
+    type: rich-text
+- name: calendar
+  label: Calendar
+  type: file
+  path: src/content/pages/calendar.md
+  operations:
+    create: false
+    delete: false
+    rename: false
+  fields:
+  - name: title
+    label: Page title
+    type: string
+    required: true
+  - name: heroAlt
+    label: Hero image description
+    type: text
+    description: Describes the photo for screen readers and search engines.
+  - &id001
+    name: legacyId
+    label: Legacy WordPress ID
+    type: number
+    hidden: true
+  - &id002
+    name: order
+    label: Nav order
+    type: number
+    hidden: true
+  - &id003
+    name: navLabel
+    label: Nav label
+    type: string
+    hidden: true
+  - &id004
+    name: navGroup
+    label: Nav group
+    type: string
+    hidden: true
+  - &id005
+    name: hero
+    label: Hero image path
+    type: string
+    hidden: true
+  - &id006
+    name: heroPos
+    label: Hero focal point
+    type: string
+    hidden: true
+  - &id007
+    name: heroStyle
+    label: Hero style
+    type: string
+    hidden: true
+  - name: body
+    label: Page content
+    type: rich-text
+- name: camps
+  label: Camps
+  type: file
+  path: src/content/pages/camps.md
+  operations:
+    create: false
+    delete: false
+    rename: false
+  fields:
+  - name: title
+    label: Page title
+    type: string
+    required: true
+  - name: heroAlt
+    label: Hero image description
+    type: text
+    description: Describes the photo for screen readers and search engines.
+  - *id001
+  - *id002
+  - *id003
+  - *id004
+  - *id005
+  - *id006
+  - *id007
+  - name: body
+    label: Page content
+    type: rich-text
+- name: club-races
+  label: Club Races
+  type: file
+  path: src/content/pages/club-races.md
+  operations:
+    create: false
+    delete: false
+    rename: false
+  fields:
+  - name: title
+    label: Page title
+    type: string
+    required: true
+  - name: heroAlt
+    label: Hero image description
+    type: text
+    description: Describes the photo for screen readers and search engines.
+  - *id001
+  - *id002
+  - *id003
+  - *id004
+  - *id005
+  - *id006
+  - *id007
+  - name: body
+    label: Page content
+    type: rich-text
+- name: competition-sign-up
+  label: Competition Sign Up
+  type: file
+  path: src/content/pages/competition-sign-up.md
+  operations:
+    create: false
+    delete: false
+    rename: false
+  fields:
+  - name: title
+    label: Page title
+    type: string
+    required: true
+  - name: heroAlt
+    label: Hero image description
+    type: text
+    description: Describes the photo for screen readers and search engines.
+  - *id001
+  - *id002
+  - *id003
+  - *id004
+  - *id005
+  - *id006
+  - *id007
+  - name: body
+    label: Page content
+    type: rich-text
+- name: contact-us
+  label: Contact Us
+  type: file
+  path: src/content/pages/contact-us.md
+  operations:
+    create: false
+    delete: false
+    rename: false
+  fields:
+  - name: title
+    label: Page title
+    type: string
+    required: true
+  - name: heroAlt
+    label: Hero image description
+    type: text
+    description: Describes the photo for screen readers and search engines.
+  - *id001
+  - *id002
+  - *id003
+  - *id004
+  - *id005
+  - *id006
+  - *id007
+  - name: body
+    label: Page content
+    type: rich-text
+- name: programs
+  label: Programs
+  type: file
+  path: src/content/pages/programs.md
+  operations:
+    create: false
+    delete: false
+    rename: false
+  fields:
+  - name: title
+    label: Page title
+    type: string
+    required: true
+  - name: heroAlt
+    label: Hero image description
+    type: text
+    description: Describes the photo for screen readers and search engines.
+  - *id001
+  - *id002
+  - *id003
+  - *id004
+  - *id005
+  - *id006
+  - *id007
+  - name: body
+    label: Page content
+    type: rich-text
+- name: try-it
+  label: Try-it
+  type: file
+  path: src/content/pages/try-it.md
+  operations:
+    create: false
+    delete: false
+    rename: false
+  fields:
+  - name: title
+    label: Page title
+    type: string
+    required: true
+  - name: heroAlt
+    label: Hero image description
+    type: text
+    description: Describes the photo for screen readers and search engines.
+  - *id001
+  - *id002
+  - *id003
+  - *id004
+  - *id005
+  - *id006
+  - *id007
+  - name: body
+    label: Page content
+    type: rich-text

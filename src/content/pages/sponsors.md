@@ -17,11 +17,15 @@ Banff/Canmore Speed Skating Club is a member of True Sport and committed to the 
 
 ## Every Kid Can Play
 
+<img src="/sponsors/alberta-government.png" alt="Government of Alberta" class="sponsor-logo" width="200" />
+
 Thank you to the **Government of Alberta** for support through the **Every Kid Can Play** grant program. This provincial initiative addresses affordability and accessibility challenges to sport, physical activity, and recreation programs for Alberta kids and their families.
 
 Learn more: [Every Kid Can Play Program](https://www.alberta.ca/every-kid-can-play-program)
 
 ## Save-On-Foods
+
+<img src="/sponsors/save-on-foods.png" alt="Save-On-Foods" class="sponsor-logo" width="200" />
 
 Thank you to **Save-On-Foods** for generously sponsoring food support at our club races. Their community support helps make race days special for our skaters and families.
 

@@ -6,7 +6,14 @@
   // asset WITHOUT invoking the Worker, so "/?page_id=1453" would match index.html
   // and the redirect would never run. Scoped to "/" because that is the only path
   // legacy WordPress URLs ever use - everything else goes straight to assets.
+  //
+  // NOTE: Cloudflare Workers Builds does NOT honor the `build` config below.
+  // The build command must be set in the Cloudflare Dashboard under:
+  // Settings > Build > Build command: "npm run build"
   "name": "website",
+  "build": {
+    "command": "npm run build"
+  },
   "compatibility_date": "2026-09-23",
   "main": "./src/worker/index.ts",
   "assets": {

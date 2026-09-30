@@ -1,6 +1,6 @@
 ---
 hero: "../../assets/poster-try-it.jpg"
-heroAlt: "Try Speed Skating poster - free sessions Sunday September 27 and Sunday October 4, 5:15 to 6:15 pm at the Canmore Rec Center, Thelma Crowe Arena. Ages 6 and up, adults included. Register by email: communication@banffcanmorespeedskating.ca"
+heroAlt: "Try Speed Skating poster - free sessions Sunday September 27 and Sunday October 4, 5:15 to 6:15 pm at the Canmore Rec Center, Thelma Crowe Arena. Ages 6 and up, adults included. Register by email: registration@banffcanmorespeedskating.ca"
 heroStyle: "poster"
 title: "Try-it"
 legacyId: 1453
@@ -8,7 +8,7 @@ order: 20
 navLabel: "Try-it"
 ---
 
-If you are interested in trying out Speed Skating, please email communication@banffcanmorespeedskating.ca
+If you are interested in trying out Speed Skating, please email registration@banffcanmorespeedskating.ca
 
 We have free try-it nights scheduled from 5:15 to 6:15 pm at the **Canmore Rec Centre (Thelma Crowe Arena)** on:
 

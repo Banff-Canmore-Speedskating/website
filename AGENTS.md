@@ -1,3 +1,16 @@
+## Before any work: pull first
+
+This site is also edited by a cloud agent (when club execs request changes)
+and through Pages CMS, so a local checkout is often behind `origin/main`.
+
+1. Run `git pull --ff-only` on `main` before reading or editing anything.
+2. If it can't fast-forward, stop and ask. Don't merge or rebase over
+   someone else's change.
+3. Pull (or `git fetch` and compare) again right before pushing.
+
+`main` is the production branch: a push deploys to
+banffcanmorespeedskating.ca in about 75 seconds.
+
 ## Development
 
 When starting the dev server, use background mode:

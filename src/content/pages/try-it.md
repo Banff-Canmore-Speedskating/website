@@ -14,21 +14,13 @@ Our next free try-it night is **Wednesday, October 14, 2026**, from 5:15 to 6:15
 
 Participants must be at least 6 years old and able to skate unassisted and have basic skating skills, including gliding and stopping on any type of skates (i.e. hockey, figure skates, etc.) Families and adults are welcome to come out too!
 
-The free on-ice session includes coaching and speed skate rental.
+The free on-ice session includes coaching, speed skates and safety equipment — you don't need to bring any gear.
 
 Please come 15 minutes early to get your skates and protective equipment fitted.
 
 Parents are required to stay at the arena during the sessions when their child is skating, in order to provide rink-side support and in case of emergency.
 
-What Should I Bring/Wear? 
-
-- Sport helmet (i.e. bike, hockey, ski or snowboard)
-
-- Glasses
-
-- Leather gloves or thick winter ski gloves
-
-- Neck guard with bib (from hockey) – We have some spares if needed
+What Should I Wear?
 
 - Long sleeve shirt and jacket or fleece
 
@@ -36,9 +28,7 @@ What Should I Bring/Wear? 
 
 - Layer clothing
 
-- Soft knee pads (i.e. bike or volleyball) – We have some spares if needed
-
-The club has some spare helmets and safety glasses and other equipment if needed.
+Speed skates and safety equipment (helmet, glasses, gloves, neck guard and knee pads) are provided. If you have your own sport helmet, glasses or gloves, feel free to bring them.
 
 Banff/Canmore Speed Skating Club is a member of True Sport and committed to the True Sport Principles.
 

@@ -1,7 +1,7 @@
 ---
-hero: "../../assets/club-group.jpg"
-heroAlt: "The Banff Canmore Speed Skating club gathered on the ice"
-heroPos: "center 40%"
+hero: "../../assets/team-hoodies-2026.jpg"
+heroAlt: "The Banff Canmore Speed Skating club together in our blue club hoodies"
+heroPos: "center 35%"
 title: "Contact Us"
 legacyId: 55
 order: 60

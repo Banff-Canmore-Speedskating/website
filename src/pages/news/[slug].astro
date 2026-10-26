@@ -12,7 +12,7 @@ const { Content } = await render(post);
 ---
 <Base title={post.data.title} current="news">
   <p class="meta">
-    {post.data.date.toLocaleDateString("en-CA", { year: "numeric", month: "long", day: "numeric" })}
+    {post.data.date.toLocaleDateString("en-CA", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })}
   </p>
   <Content />
   <hr />

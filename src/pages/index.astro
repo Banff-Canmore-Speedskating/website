@@ -2,9 +2,9 @@
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import Base from "../layouts/Base.astro";
-import hero from "../assets/race-start.jpg";
-import welcoming from "../assets/race-action.jpg";
-import racing from "../assets/pack-corner.jpg";
+import hero from "../assets/race-night-start-pano.jpg";
+import welcoming from "../assets/young-racers-2026.jpg";
+import racing from "../assets/pack-corner-2026.jpg";
 
 const posts = (await getCollection("posts")).sort(
   (a, b) => b.data.date.valueOf() - a.data.date.valueOf(),
@@ -12,7 +12,7 @@ const posts = (await getCollection("posts")).sort(
 const recent = posts.slice(0, 3);
 const REGISTER = "https://icereg.ca/#!/events/banffcanmore-speed-skating-club-20262027";
 const fmt = (d: Date) =>
-  d.toLocaleDateString("en-CA", { year: "numeric", month: "long", day: "numeric" });
+  d.toLocaleDateString("en-CA", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" });
 ---
 <Base
   wide
@@ -20,7 +20,7 @@ const fmt = (d: Date) =>
   description="Speed skating for all ages in Banff and Canmore. Wednesdays and Sundays at the Canmore Rec Centre. Beginners and adults welcome — skates and coaching provided at free Try-It nights."
 >
   <section class="hero">
-    <Image src={hero} alt="Three club skaters driving out of the start at a club race"
+    <Image src={hero} alt="Five club skaters driving off the start line at Club Race Night #1"
            widths={[760, 1200, 1800]} sizes="100vw" loading="eager" />
     <div class="hero-txt">
       <p class="kicker">Canmore &amp; Banff &middot; Ages 6 and up</p>
@@ -55,7 +55,7 @@ const fmt = (d: Date) =>
       <p>Ages 6 and up. Adults and parents are genuinely welcome on the ice too.</p>
       <p><a class="cta" href="/try-it/">Try-It night details</a></p>
     </div>
-    <Image src={welcoming} alt="Young skaters of mixed ages and abilities racing together"
+    <Image src={welcoming} alt="Two young skaters in yellow helmets racing side by side"
            widths={[560, 900]} sizes="(max-width: 860px) 100vw, 50vw" />
   </section>
 
@@ -97,7 +97,7 @@ const fmt = (d: Date) =>
     .hero :global(img) {
       display: block; width: 100%; height: 100%;
       min-height: clamp(360px, 52vw, 580px);
-      object-fit: cover; object-position: center 32%;
+      object-fit: cover; object-position: center 45%;
     }
     .hero-txt {
       display: flex; flex-direction: column; justify-content: flex-end;

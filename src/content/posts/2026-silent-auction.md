@@ -23,7 +23,7 @@ Winning items must be picked up on **Saturday, December 5, 2–4 PM** in the **M
 
 ## Auction highlights
 
-There are 19 items in total, including experiences, restaurant gift cards, sports gear and gift baskets. Here are a few standouts:
+Items include experiences, restaurant gift cards, sports gear and gift baskets, and more are being added, so check back often! Here are a few standouts:
 
 <div class="photo-grid">
   <a href="/media/2026-silent-auction/alpine-helicopters.jpg"><img src="/media/2026-silent-auction/alpine-helicopters.jpg" alt="Alpine Helicopters Inc gift certificate" loading="lazy"></a>
